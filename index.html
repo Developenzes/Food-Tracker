@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <title>Food Tracker</title>
+</head>
+<body>
+    <nav id="navbar">
+        <a href="#" class="nav-brand">My Nutrition</a>
+    </nav>
+
+    <main class="container">            
+        <h2>Add Food</h2>
+        <form id="create-form">
+            <label for="create-name">Food name:</label>
+            <select id="create-name">
+                <option value="please select">Please select</option>
+                <option value="pizza">Pizza</option>
+                <option value="pasta">Pasta</option>
+                <option value="burger">Burger</option>
+                <option value="soup">Soup</option>
+                <option value="salad">Salad</option>
+                <option value="apple">Apple</option>
+                <option value="peach">Peach</option>
+                <option value="cider">Chocolate</option>
+            </select>
+            <div class="nutrition-values">
+                <label for="create-carbs">Carbs:</label>
+                <input class="nutrition-input" id="create-carbs" type="number" min="0" max="200" placeholder="0g">
+                <label for="create-protein">Protein:</label>
+                <input class="nutrition-input" id="create-protein" type="number" min="0" max="200" placeholder="0g">
+                <label for="create-fat">Fat:</label>
+                <input class="nutrition-input" id="create-fat" type="number" min="0" max="200" placeholder="0g">
+                <!-- empty div due to grid -->
+                <div></div> 
+                <input type="submit" class="btn" value="Add">
+            </div>
+        </form>
+        
+        <h2>Stats</h2>        
+        <canvas id="app-chart"></canvas>
+                         
+        <h2>Log</h2>
+        <div class="total-calories-container">
+            <h3>Total calories logged: <span id="total-calories">0</span></h3>
+        </div>  
+        <ul id="food-list">
+            <!-- <li class="card">
+                <div>
+                    <h3 class="name">NAME</h3>
+                    <div class="calories">0 calories</div>
+                    <ul class="macros">
+                        <li class="carbs">
+                            <p>Carbs</p>
+                            <p class="value">CARBS g</p>                            
+                        </li>
+                        <li class="protein">
+                            <p>Protein</p>
+                            <p class="value">PROTEIN g</p>                            
+                        </li>
+                        <li class="fat">
+                            <p>Fat</p>
+                            <p class="value">FAT g</p>                            
+                        </li>
+                    </ul>
+                </div>
+                <button id="dlt-btn" class="delete-btn">x</button>
+            </li> -->
+        </ul>        
+    </main>
+
+    <script type="module" src="./app.js"></script>
+</body>
+</html>

@@ -1,0 +1,267 @@
+.snackbar {
+  display: inline-block;
+  position: fixed;
+  background: #323232;
+  color: #f1f1f1;
+  min-height: 50px;
+  min-width: 290px;
+  padding: 16px 24px 12px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+          box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  border-radius: 2px;
+  bottom: 1rem;
+  left: 1rem;
+  font-size: 90%;
+  -webkit-transition: visibility 0.3s, -webkit-transform 0.3s;
+  transition: visibility 0.3s, -webkit-transform 0.3s;
+  transition: visibility 0.3s, transform 0.3s;
+  transition: visibility 0.3s, transform 0.3s, -webkit-transform 0.3s;
+  -webkit-transform: translateY(100px);
+          transform: translateY(100px);
+  visibility: hidden;
+  will-change: transform;
+}
+
+.snackbar--visible {
+  visibility: visible;
+  -webkit-transform: none;
+          transform: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: #f2ecee;
+  max-width: 100vw;
+}
+
+h2,
+h3 {
+  color: #333333;
+}
+
+h2 {
+  margin: 30px 0 10px 0;
+}
+
+h2:first-child {
+  margin-top: 10px;
+}
+
+#navbar {
+  width: 100%;
+  background-color: #fff;
+  padding: 1rem 0;
+  -webkit-box-shadow: 0px 3px 7px 1px rgba(0, 0, 0, 0.07), 0px -3px 7px 1px rgba(0, 0, 0, 0.07);
+          box-shadow: 0px 3px 7px 1px rgba(0, 0, 0, 0.07), 0px -3px 7px 1px rgba(0, 0, 0, 0.07);
+}
+
+.nav-brand {
+  font-size: 2rem;
+  text-decoration: none;
+  padding-left: 1.25rem;
+  color: #04530f;
+  line-height: 1.4;
+}
+
+.container {
+  max-width: 800px;
+  padding: 1rem 1.25rem;
+  margin: 0 auto;
+}
+
+#create-form {
+  margin: 1rem 0;
+}
+
+#create-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+#create-form select {
+  padding: 10px 15px;
+  margin-top: 5px;
+  border-radius: 8px;
+  width: 200px;
+}
+
+.nutrition-values {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 100px auto;
+      grid-template-columns: 100px auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px 0;
+  margin: 20px 0;
+}
+
+.nutrition-values ::-webkit-input-placeholder {
+  color: #d9cfd3;
+}
+
+.nutrition-values :-ms-input-placeholder {
+  color: #d9cfd3;
+}
+
+.nutrition-values ::-ms-input-placeholder {
+  color: #d9cfd3;
+}
+
+.nutrition-values ::placeholder {
+  color: #d9cfd3;
+}
+
+.nutrition-input {
+  width: 100px;
+  padding: 0.75rem 0.5rem;
+  border: none;
+  border-radius: 3px;
+  text-align: right;
+  font-size: 1rem;
+}
+
+.btn {
+  width: 100px;
+  color: #fff;
+  background-color: #436208;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  border-radius: 3px;
+  padding: 0.7rem 0.5rem;
+  border: none;
+}
+
+.btn:hover {
+  background-color: #537a0a;
+}
+
+.total-calories-container {
+  width: 100%;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid #436208;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.total-calories-container h3 {
+  font-weight: normal;
+}
+
+.total-calories-container h3 span {
+  font-weight: bold;
+}
+
+#food-list {
+  list-style: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+@media (max-width: 600px) {
+  #food-list {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    gap: 15px;
+  }
+}
+
+.card {
+  background-color: #fff;
+  -webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.07);
+          box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.07);
+  padding: 1rem;
+  margin: 0;
+  border-radius: 8px;
+  text-align: center;
+  position: relative;
+  opacity: 1;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.card .name {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.card .calories {
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+  font-style: italic;
+  color: #1a1a1a;
+}
+
+.card .delete-btn {
+  color: red;
+  background: #fff;
+  border: none;
+  font-size: 1.5rem;
+  position: absolute;
+  top: 1%;
+  right: 1%;
+  padding: 2px 7px;
+  cursor: pointer;
+  -webkit-transition: .3s ease-out;
+  transition: .3s ease-out;
+}
+
+.card .delete-btn:hover {
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+}
+
+.macros {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: #1a1a1a;
+}
+
+.macros li {
+  text-align: center;
+  list-style: disc;
+}
+
+.macros li .value {
+  margin-top: 5px;
+}
+
+.macros .carbs::marker {
+  color: #498108;
+  font-size: 1.2rem;
+}
+
+.macros .protein::marker {
+  color: #0b6092;
+  font-size: 1.2rem;
+}
+
+.macros .fat::marker {
+  color: #8b0828;
+  font-size: 1.2rem;
+}
+/*# sourceMappingURL=style.css.map */
