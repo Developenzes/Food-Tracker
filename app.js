@@ -46,12 +46,10 @@ const displayCard = (document) => {
 }
 
 // Chart
-const renderChart = () => { 
-    // destroy old instance of the chart if it exists
+const renderChart = () => {
     chartInstance?.destroy();
-    
     const context = document.querySelector("#app-chart").getContext("2d");
-    // crate new instance 
+
     chartInstance = new Chart(context, {
       type: "bar",
       data: {
