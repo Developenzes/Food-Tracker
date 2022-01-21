@@ -99,8 +99,7 @@ form.addEventListener("submit", (e) => {
             fat: { integerValue: fat.value }
           }
     }).then(data => {
-        if (data.error) {
-            // there was an error
+        if (data.error) {       
             snackbar.show("Some data is missing.");
             return;       
         }
